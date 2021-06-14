@@ -10,7 +10,7 @@
       <% end %>
       <%= link_to task.title, task_path(task.id) %>
       <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <i class="fas fa-trash-alt"></i>
       <% end %>
     </li>
   <% end %>
@@ -20,4 +20,9 @@
 
 <%= link_to new_task_path do %>
   <i class="fa fa-plus"></i> Add a new task
+<% end %>
+
+
+<%= month_calendar do |date| %>
+  <%= date.day %>
 <% end %>
